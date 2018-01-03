@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=1]
+
+[ext_resource path="res://cube.png" type="Texture" id=1]
+[ext_resource path="res://circle.png" type="Texture" id=2]
+[ext_resource path="res://pyramid.png" type="Texture" id=3]
+[ext_resource path="res://sphere.png" type="Texture" id=4]
+[ext_resource path="res://diamond.png" type="Texture" id=5]
+
+[node name="Node" type="Node"]
+
+[node name="icon" type="Sprite" parent="."]
+
+transform/pos = Vector2( 178.699, 134.046 )
+transform/rot = 44.8269
+transform/scale = Vector2( 0.355928, 0.33145 )
+texture = ExtResource( 1 )
+modulate = Color( 0.445313, 0, 0, 1 )
+
+[node name="icon2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 43.9399, 46.6522 )
+transform/rot = 43.8602
+transform/scale = Vector2( 0.294507, 0.302402 )
+texture = ExtResource( 2 )
+
+[node name="icon1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 287.218, 293.024 )
+transform/rot = -319.16
+transform/scale = Vector2( 0.500503, 0.457021 )
+texture = ExtResource( 3 )
+modulate = Color( 0.0734653, 0.433594, 0.0220184, 1 )
+
+[node name="icon4" type="Sprite" parent="."]
+
+transform/pos = Vector2( 134.454, 333.817 )
+transform/rot = 11.7629
+transform/scale = Vector2( 0.2713, 0.278572 )
+texture = ExtResource( 4 )
+
+[node name="icon3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 344.624, 161.701 )
+transform/rot = -294.693
+transform/scale = Vector2( 0.325771, 0.297469 )
+texture = ExtResource( 5 )
+modulate = Color( 0.589844, 0.556435, 0.0552979, 1 )
+
+

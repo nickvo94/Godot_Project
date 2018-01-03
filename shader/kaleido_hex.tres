@@ -1,0 +1,44 @@
+[gd_resource type="CanvasItemShader" format=1]
+
+[resource]
+
+_code = {
+"fragment": "//uniform vec2 size;
+float pi2 = 6.2831853;
+
+//vec2 pos = UV / TEXTURE_PIXEL_SIZE;
+float dist  = distance(vec2(0.5, 0.5), UV);
+vec2  delta = (vec2(0.5, 0.5) - UV);
+//delta.x += 1.0;
+//delta.y += 0.0;
+//delta = mod(delta, vec2(0.5, 1.0));
+float angle = (atan(1/(delta.y / delta.x)));
+
+angle = mod(angle, 2.0594885173);
+
+if (angle > 1.02974425867665)
+{
+	angle = 2.0594885173 - angle;
+}
+
+//angle = - angle /3.14;
+
+
+angle *= 1;
+angle += TIME * 0.15;
+dist *= 1;
+
+angle = mod(angle, 1.0);
+dist  = mod(dist, 1.0);
+
+vec4 outColor = tex(TEXTURE, vec2(angle, dist));
+//outColor = color(angle, angle, angle, 1.0);
+
+COLOR = outColor;",
+"fragment_ofs": 0,
+"light": "",
+"light_ofs": 0,
+"vertex": "",
+"vertex_ofs": 0
+}
+
