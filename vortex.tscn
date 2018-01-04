@@ -1,6 +1,4 @@
-[gd_scene load_steps=4 format=1]
-
-[ext_resource path="res://icon.png" type="Texture" id=1]
+[gd_scene load_steps=3 format=1]
 
 [sub_resource type="CanvasItemShader" id=1]
 
@@ -60,7 +58,6 @@ shader_param/speed = 1.0
 material/material = SubResource( 2 )
 transform/pos = Vector2( 1.60198, -0.0449524 )
 transform/scale = Vector2( 19.9928, 11.3421 )
-texture = ExtResource( 1 )
 centered = false
 
 
