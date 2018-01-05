@@ -6,6 +6,9 @@
 
 
 
+
+
+
 [node name="main" type="Node2D"]
 
 script/script = ExtResource( 1 )
