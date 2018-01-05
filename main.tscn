@@ -42,10 +42,6 @@ material/material = SubResource( 2 )
 
 visibility/visible = false
 
-[node name="kaleido1" parent="parts" instance=ExtResource( 2 )]
-
-material/material = SubResource( 2 )
-
 [node name="sound" type="Node" parent="."]
 
 [node name="StreamPlayer" type="StreamPlayer" parent="sound"]
