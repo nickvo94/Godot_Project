@@ -1,0 +1,55 @@
+[gd_resource type="CanvasItemShader" format=1]
+
+[resource]
+
+_code = {
+"fragment": "uniform float step_size = 0.1;
+uniform vec2 aspect = vec2(1.0, 1.6);
+uniform float thickness = 0.05;
+uniform float speed = 1.0;
+uniform float time = 0.0;
+uniform float radial_repeat = 0.0;
+uniform float sharpness = 1.0;
+
+float PI = 3.141;
+float TAU = 6.2831853;
+
+float thick;
+float angle;
+float curr_dist = distance(vec2(0.5, 0.5), UV);
+
+angle = atan((0.5 - UV.x) / (0.5 - UV.y));
+if ((UV.y >= 0.5) && (UV.x < 0.5))
+{
+	angle += PI;
+}
+else 
+{
+	if ((UV.y >= 0.5) && (UV.x >= 0.5)) {angle -= PI;}
+}
+
+//curr_dist += angle * 0.032;
+
+float point = mod(curr_dist, step_size);
+float circle = (curr_dist - point) / step_size;
+float line_dist = abs(step_size - point) / step_size;
+float line = sin(line_dist * PI);
+
+// Fade tail
+float spin = (circle * 1.13) + TIME * 0.1 + 0.1;
+float repeat = circle * radial_repeat + 1.0;
+float fade = mod(((angle/TAU) * repeat) + circle * 1.6 + spin, 1.0);
+
+// Sharpen resulting line
+thick = pow(line * (2.0 * sharpness), (8.0 * sharpness));
+thick = clamp(thick, 0.0, 1.0);
+thick *= fade;
+
+COLOR = color(circle * 0.01, 0, thick, 1.0);",
+"fragment_ofs": 0,
+"light": "",
+"light_ofs": 0,
+"vertex": "",
+"vertex_ofs": 0
+}
+
