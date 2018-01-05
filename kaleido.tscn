@@ -8,12 +8,9 @@
 
 shader/shader = ExtResource( 2 )
 shader/shading_mode = 0
-<<<<<<< HEAD
 shader_param/distCoeff = 1.0
 shader_param/angleCoeff = 1.0
 shader_param/timeCoeff = 0.4
-=======
->>>>>>> 29044723f85a64c410057b4a14b7d84fab0e3eaa
 
 [node name="kaleido" type="Node2D"]
 
