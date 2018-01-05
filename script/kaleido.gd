@@ -30,7 +30,7 @@ func set_time(new_time):
 func set_audio(levels):
 	var audio = levels[2]
 	#material_node.set_shader_param("step_size", clamp(audio * 0.08 + 0.05, 0.0, 0.5))
-	material_node.set_shader_param("sharpness", clamp(audio * 0.2 + 0.8, 0.5, 1.0))
+	material_node.set_shader_param("scale", clamp(audio * 0.2 + 0.8, 0.5, 1.0))
 
 func _process(delta):
 	if (devi >3 or devi == 3) :

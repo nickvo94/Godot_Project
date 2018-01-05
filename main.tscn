@@ -9,7 +9,7 @@
 [sub_resource type="CanvasItemShader" id=1]
 
 _code = {
-"fragment": "uniform var sharpness = 1",
+"fragment": "",
 "fragment_ofs": 0,
 "light": "",
 "light_ofs": 0,
