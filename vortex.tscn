@@ -1,4 +1,7 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://script/vortex.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
 
 [sub_resource type="CanvasItemShader" id=1]
 
@@ -7,6 +10,7 @@ _code = {
 uniform vec2 aspect = vec2(1.0, 1.6);
 uniform float thickness = 0.05;
 uniform float speed = 1.0;
+uniform float time = 0.0;
 
 float PI = 3.141;
 float TAU = 6.2831853;
@@ -50,14 +54,18 @@ shader_param/step_size = 0.4
 shader_param/aspect = Vector2( 1, 1.6 )
 shader_param/thickness = 0.05
 shader_param/speed = 1.0
+shader_param/time = 0.0
 
-[node name="Node2D" type="Node2D"]
+[node name="vortex" type="Node2D"]
+
+script/script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 
 material/material = SubResource( 2 )
 transform/pos = Vector2( 1.60198, -0.0449524 )
 transform/scale = Vector2( 19.9928, 11.3421 )
+texture = ExtResource( 2 )
 centered = false
 
 
