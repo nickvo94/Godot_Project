@@ -10,6 +10,7 @@ uniform float speed = 1.0;
 uniform float time = 0.0;
 uniform float radial_repeat = 0.0;
 uniform float sharpness = 1.0;
+uniform float fade_amt = 2.0;
 
 float PI = 3.141;
 float TAU = 6.2831853;
@@ -36,16 +37,16 @@ float line_dist = abs(step_size - point) / step_size;
 float line = sin(line_dist * PI);
 
 // Fade tail
-float spin = (circle * 1.13) + TIME * 0.1 + 0.1;
+float spin = (circle * 1.13) - time * 0.1 + 0.1;
 float repeat = circle * radial_repeat + 1.0;
 float fade = mod(((angle/TAU) * repeat) + circle * 1.6 + spin, 1.0);
 
 // Sharpen resulting line
 thick = pow(line * (2.0 * sharpness), (8.0 * sharpness));
 thick = clamp(thick, 0.0, 1.0);
-thick *= fade;
+thick *= pow(fade, fade_amt);
 
-COLOR = color(circle * 0.01, 0, thick, 1.0);",
+COLOR = color(circle * 0.01, 0, thick, COLOR.a);",
 "fragment_ofs": 0,
 "light": "",
 "light_ofs": 0,

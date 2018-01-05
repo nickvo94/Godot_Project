@@ -4,6 +4,7 @@ export var time = 0.0
 export var audio_decay = 0.5
 export var audio_offset = 5
 export var debug_audio = true
+export var debug_time = true
 
 
 var spec_ranges = [0.1, 0.2, 0.3, 0.35, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1.0]
@@ -19,6 +20,8 @@ var spectrum_size = 30
 var audio_spectrum
 var music_length = 0
 var audio_levels = [0.0]
+
+var tweens
 
 func _ready():
 	print("-----------------------------------------------------------------")
@@ -40,6 +43,8 @@ func _ready():
 	audio_levels.resize(spec_ranges.size() - 1)
 	for i in range(audio_levels.size() - 1):
 		audio_levels[i] = 0.0
+
+	tweens = get_node("tweens")
 
 	print(spec_ranges)
 
@@ -72,7 +77,8 @@ func _process(delta):
 	time = time + delta
 
 	make_audio_levels()
-	if (debug_audio): get_node("debug_audio").set_audio(audio_levels)
+	if (debug_audio): get_node("debug/audio").set_audio(audio_levels)
+	if (debug_time): get_node("debug/time").set_text(str(time))
 	#if ((time - floor(time)) < 0.1):
 	#	print(audio_levels)
 
@@ -81,6 +87,7 @@ func _process(delta):
 		if part.has_method("set_audio"): part.set_audio(audio_levels)
 
 	run_timeline_actions()
+	update_tweens()
 
 
 func run_timeline_actions():
@@ -96,7 +103,7 @@ func run_timeline_actions():
 		if (action.time < time):
 			prints(time, action.target, action.method)
 			if action.target == "self":
-				self.call(action.method, action.args)
+				self.callv(action.method, action.args)
 			else:
 				var node = parts_node.get_node(action.target)
 				if node != null:
@@ -138,6 +145,20 @@ func make_audio_levels():
 		audio_levels[i] = clamp((audio_levels[i] + prev_levels[i] * audio_decay), 0.0, 1.0)
 
 
-func kaleido_change(args):
-	prints("kaleido_change", args)
+func fade_to(name, value, time):
+	prints("fade", name, value, time)
+	var target = get_node("parts").get_node(name)
+	if !target: return
 
+	var tween = Tween.new()
+	tween.interpolate_property(target, "visibility/opacity",
+								target.get_opacity(), value,
+								time, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+	tweens.add_child(tween)
+	tween.start()
+
+
+func update_tweens():
+	for tween in tweens.get_children():
+		if tween.is_active() == false:
+			tween.queue_free()
