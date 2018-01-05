@@ -1,7 +1,8 @@
 {   
     "actions": [
         {"time": 0.0,     "ofs": 0.0,    "target": "kaleido",        "method": "show",    "args": null}
-		,{"time": 2.0,     "ofs": 0.0,    "target": "kaleido",        "method": "change",    "args": [0.5, 1.0, 1.0]}
+		,{"time": 10.0,    "ofs": 0.0,    "target": "vortex",        "method": "show",    "args": null}
+		,{"time": 20.0,    "ofs": 0.0,    "target": "vortex",        "method": "hide",    "args": null}		
         ,{"time": 2.0,     "ofs": 0.0,    "target": "kaleido",        "method": "change",    "args": [0.5, 1.0, 1.0]}		
     ]
 }

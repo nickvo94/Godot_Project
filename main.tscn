@@ -20,7 +20,7 @@ debug_audio = true
 
 visibility/visible = false
 
-[node name="Node2D" parent="parts" instance=ExtResource( 3 )]
+[node name="vortex" parent="parts" instance=ExtResource( 3 )]
 
 visibility/visible = false
 
