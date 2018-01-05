@@ -20,8 +20,8 @@ script/script = ExtResource( 1 )
 [node name="ShaderFrame" type="ViewportSprite" parent="."]
 
 material/material = SubResource( 1 )
-transform/pos = Vector2( 640, 360 )
-transform/scale = Vector2( 2.5, 1.8 )
+transform/pos = Vector2( 677.855, 345.61 )
+transform/scale = Vector2( 1.2253, 1.21304 )
 viewport = NodePath("../Viewport")
 
 [node name="Viewport" type="Viewport" parent="."]
