@@ -10,7 +10,6 @@ _code = {
 uniform vec2 aspect = vec2(1.0, 1.6);
 uniform float thickness = 0.05;
 uniform float speed = 1.0;
-uniform float time = 0.0;
 
 float PI = 3.141;
 float TAU = 6.2831853;
@@ -54,7 +53,6 @@ shader_param/step_size = 0.4
 shader_param/aspect = Vector2( 1, 1.6 )
 shader_param/thickness = 0.05
 shader_param/speed = 1.0
-shader_param/time = 0.0
 
 [node name="vortex" type="Node2D"]
 

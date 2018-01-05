@@ -17,6 +17,7 @@ func set_time(new_time):
 
 
 func _process(delta):
+	
 	pass
 
 

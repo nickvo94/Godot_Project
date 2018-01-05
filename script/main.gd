@@ -18,7 +18,7 @@ func _ready():
 	set_process(true)
 	load_actions()
 	time = 0.0
-	sound_node.play()
+	#sound_node.play()
 
 
 func load_actions():
