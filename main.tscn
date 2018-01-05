@@ -6,7 +6,6 @@
 [ext_resource path="res://sound/842512545520180102200022.ogg" type="AudioStream" id=4]
 [ext_resource path="res://script/debug_audio.gd" type="Script" id=5]
 
-
 [sub_resource type="CanvasItemShader" id=1]
 
 _code = {
@@ -42,10 +41,6 @@ material/material = SubResource( 2 )
 [node name="vortex" parent="parts" instance=ExtResource( 3 )]
 
 visibility/visible = false
-
-[node name="kaleido1" parent="parts" instance=ExtResource( 2 )]
-
-material/material = SubResource( 2 )
 
 [node name="sound" type="Node" parent="."]
 
