@@ -6,6 +6,7 @@ _code = {
 "fragment": "uniform float distCoeff = 1;
 uniform float angleCoeff = 1;
 uniform float timeCoeff = 0.15;
+uniform float sharpness = 1;
 float pi2 = 6.2831853;
 
 //vec2 pos = UV / TEXTURE_PIXEL_SIZE;
