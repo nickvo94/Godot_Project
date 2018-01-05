@@ -27,18 +27,23 @@ func set_time(new_time):
 	#if(time > 2.2): time = new_time*2
 	material_node.set_shader_param("time", time)
 
+func set_audio(levels):
+	var audio = levels[2]
+	#material_node.set_shader_param("step_size", clamp(audio * 0.08 + 0.05, 0.0, 0.5))
+	material_node.set_shader_param("scale", clamp(audio * 0.2 + 0.8, 0.5, 1.0))
 
 func _process(delta):
-	if(devi > 3 && devi < 4) : print(time)
 	if (devi >3 or devi == 3) :
 		material_node.set_shader_param("distCoeff", time)
 
 	if (devi < 3) :
 		#material_node.set_shader_param("distCoeff", 80/time)
 		#if((80/time) < 1 ):
-		multi -= 0.005
+		if(time < -50): multi += 0.3
+		else: multi -= 0.005
 		material_node.set_shader_param("distCoeff", multi+1)
 		material_node.set_shader_param("angleCoeff", multi-1.48)
+		print(time)
 
 
 

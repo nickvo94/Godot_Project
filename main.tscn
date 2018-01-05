@@ -1,10 +1,26 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=8 format=1]
 
 [ext_resource path="res://script/main.gd" type="Script" id=1]
 [ext_resource path="res://kaleido.tscn" type="PackedScene" id=2]
 [ext_resource path="res://vortex.tscn" type="PackedScene" id=3]
 [ext_resource path="res://sound/842512545520180102200022.ogg" type="AudioStream" id=4]
 [ext_resource path="res://script/debug_audio.gd" type="Script" id=5]
+
+[sub_resource type="CanvasItemShader" id=1]
+
+_code = {
+"fragment": "",
+"fragment_ofs": 0,
+"light": "",
+"light_ofs": 0,
+"vertex": "",
+"vertex_ofs": 0
+}
+
+[sub_resource type="CanvasItemMaterial" id=2]
+
+shader/shader = SubResource( 1 )
+shader/shading_mode = 0
 
 [node name="main" type="Node2D"]
 
@@ -20,10 +36,15 @@ debug_time = true
 [node name="kaleido" parent="parts" instance=ExtResource( 2 )]
 
 visibility/visible = false
+material/material = SubResource( 2 )
 
 [node name="vortex" parent="parts" instance=ExtResource( 3 )]
 
 visibility/visible = false
+
+[node name="kaleido1" parent="parts" instance=ExtResource( 2 )]
+
+material/material = SubResource( 2 )
 
 [node name="sound" type="Node" parent="."]
 

@@ -6,6 +6,7 @@ _code = {
 "fragment": "uniform float distCoeff = 1;
 uniform float angleCoeff = 1;
 uniform float timeCoeff = 0.15;
+uniform float scale = 1;
 float pi2 = 6.2831853;
 
 //vec2 pos = UV / TEXTURE_PIXEL_SIZE;
@@ -33,7 +34,7 @@ dist *= distCoeff;
 angle = mod(angle, 1.0);
 dist  = mod(dist, 1.0);
 
-vec4 outColor = tex(TEXTURE, vec2(angle, dist));
+vec4 outColor = tex(TEXTURE, vec2(angle, dist)*scale);
 //outColor = color(angle, angle, angle, 1.0);
 
 COLOR = outColor;",
