@@ -4,6 +4,8 @@ var time = 0.0
 var actions = {}
 var action_idx = 0
 var parts = []
+onready var parts_node = get_node("parts")
+
 
 func _ready():
 	print("-----------------------------------------------------------------")
@@ -52,8 +54,11 @@ func _process(delta):
 
 		action = actions[action_idx]
 		if (action.time < time):
-			prints(time, action.method)
+			prints(time, action.target, action.method)
 			self.callv(action.method, action.args)
+			var node = parts_node.get_node(action.target)
+			if node != null:
+				node.call(action.method, action.args)
 			action_idx = action_idx + 1
 		else:
 			done = true
@@ -61,3 +66,4 @@ func _process(delta):
 
 func kaleido_change(args):
 	prints("kaleido_change", args)
+
