@@ -20,7 +20,7 @@ angle = mod(angle, 2.0594885173);
 
 if (angle > 1.02974425867665)
 {
-	angle = 1.02974425867665 - angle;
+	angle = 2.0594885173 - angle;
 }
 
 //angle = - angle /3.14;
