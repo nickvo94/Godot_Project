@@ -25,7 +25,7 @@ shader/shading_mode = 0
 [node name="main" type="Node2D"]
 
 script/script = ExtResource( 1 )
-time = 0.0
+time = 85.0
 audio_decay = 0.5
 audio_offset = -5
 debug_audio = true
@@ -68,11 +68,12 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 1065.0
-margin/top = 13.0
-margin/right = 1105.0
-margin/bottom = 27.0
+margin/left = 610.0
+margin/top = 653.0
+margin/right = 650.0
+margin/bottom = 667.0
 text = "time"
+align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
