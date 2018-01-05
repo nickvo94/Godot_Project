@@ -29,7 +29,6 @@ func _ready():
 
 	set_process(true)
 	load_actions()
-<<<<<<< HEAD
 
 	music.play(time)
 	music_length = music.get_length()
@@ -43,10 +42,6 @@ func _ready():
 		audio_levels[i] = 0.0
 
 	print(spec_ranges)
-=======
-	time = 0.0
-	#sound_node.play()
->>>>>>> f49857bd55cc8f2a8ec77c248769094b8d5bf4ee
 
 
 func load_actions():

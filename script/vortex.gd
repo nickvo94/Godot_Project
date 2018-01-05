@@ -23,7 +23,7 @@ func set_audio(levels):
 	material_node.set_shader_param("sharpness", clamp(audio * 0.2 + 0.8, 0.5, 1.0))
 
 func _process(delta):
-	
+
 	pass
 
 
