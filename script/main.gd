@@ -5,6 +5,7 @@ var actions = {}
 var action_idx = 0
 var parts = []
 onready var parts_node = get_node("parts")
+onready var sound_node = get_node("sound/StreamPlayer")
 
 
 func _ready():
@@ -17,6 +18,7 @@ func _ready():
 	set_process(true)
 	load_actions()
 	time = 0.0
+	sound_node.play()
 
 
 func load_actions():
@@ -46,6 +48,10 @@ func _process(delta):
 	if actions.size() == 0: return
 
 	time = time + delta
+
+	for part in parts:
+		if part.has_method("set_time"): part.set_time(time)
+
 	var done = false
 	var action
 	while !done:
