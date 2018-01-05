@@ -7,7 +7,9 @@
 
 shader/shader = ExtResource( 1 )
 shader/shading_mode = 0
-shader_param/dist_mul = 1.0
+shader_param/distCoeff = 1.0
+shader_param/angleCoeff = 1.0
+shader_param/timeCoeff = 0.4
 
 [node name="Node" type="Node2D"]
 

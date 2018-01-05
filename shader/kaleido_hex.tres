@@ -3,7 +3,9 @@
 [resource]
 
 _code = {
-"fragment": "//uniform vec2 size;
+"fragment": "uniform float distCoeff = 1;
+uniform float angleCoeff = 1;
+uniform float timeCoeff = 0.15;
 float pi2 = 6.2831853;
 
 //vec2 pos = UV / TEXTURE_PIXEL_SIZE;
@@ -18,15 +20,15 @@ angle = mod(angle, 2.0594885173);
 
 if (angle > 1.02974425867665)
 {
-	angle = 2.0594885173 - angle;
+	angle = 1.02974425867665 - angle;
 }
 
 //angle = - angle /3.14;
 
 
-angle *= 1;
-angle += TIME * 0.15;
-dist *= 1;
+angle *= angleCoeff;
+angle += TIME * timeCoeff;
+dist *= distCoeff;
 
 angle = mod(angle, 1.0);
 dist  = mod(dist, 1.0);
