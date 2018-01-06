@@ -21,7 +21,7 @@ script/script = ExtResource( 1 )
 
 material/material = SubResource( 1 )
 transform/pos = Vector2( 640, 360 )
-transform/scale = Vector2( 2.5, 1.8 )
+transform/scale = Vector2( 2.5, 1.4 )
 viewport = NodePath("../Viewport")
 
 [node name="Viewport" type="Viewport" parent="."]
