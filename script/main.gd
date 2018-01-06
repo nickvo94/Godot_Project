@@ -70,6 +70,20 @@ func load_actions():
 		print("Main: Invalid JSON")
 		actions = []
 
+	actions.sort_custom(self, "sort_action_by_time")
+	print("Main: sorted actions by time.")
+
+
+func sort_action_by_time(a, b):
+	if a.has("rem"): return true
+	if b.has("rem"): return false
+	var atime = 0
+	var btime = 0
+	if a.has("time"): atime = a.time
+	if b.has("time"): btime = b.time
+	if atime < btime: return true
+	return false
+
 
 func _process(delta):
 	#print(music.get_pos())

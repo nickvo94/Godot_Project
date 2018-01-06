@@ -6,13 +6,13 @@ var material_node
 var time = 0
 var morph_time = 0
 
-var speed = 1.0
-var step_size = 0.1
-var tail_fade = 1.0
-var amt_morph_time = 0.5
-var amt_step_change = 0.01
-var amt_tail_fade = 2.0
-var amt_repeat = 3.0
+export var speed = 1.0
+export var step_size = 0.1
+export var tail_fade = 1.0
+export var amt_morph_time = 0.5
+export var amt_step_change = 0.01
+export var amt_tail_fade = 2.0
+export var amt_repeat = 3.0
 
 
 func _ready():

@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://script/triangles_2.gd" type="Script" id=1]
+[ext_resource path="res://image/triangle.png" type="Texture" id=2]
+[ext_resource path="res://script/triangle.gd" type="Script" id=3]
+
+[node name="triangles" type="Node2D"]
+
+script/script = ExtResource( 1 )
+
+[node name="ColorFrame" type="ColorFrame" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -61.0
+margin/top = -251.0
+margin/right = 1339.0
+margin/bottom = 907.0
+color = Color( 0.191406, 0, 0, 0.893373 )
+
+[node name="tri" type="Sprite" parent="."]
+
+visibility/visible = false
+transform/pos = Vector2( 633.652, 339.496 )
+texture = ExtResource( 2 )
+centered = false
+offset = Vector2( -512, -600 )
+script/script = ExtResource( 3 )
+depth = 3.0
+
+[node name="sprites" type="Node2D" parent="."]
+
+z/z = 1
+
+

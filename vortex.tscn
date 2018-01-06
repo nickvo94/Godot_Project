@@ -20,6 +20,13 @@ shader_param/fade_amt = 2.0
 [node name="vortex" type="Node2D"]
 
 script/script = ExtResource( 1 )
+speed = 1.0
+step_size = 0.1
+tail_fade = 1.0
+amt_morph_time = 0.5
+amt_step_change = 0.01
+amt_tail_fade = 2.0
+amt_repeat = 3.0
 
 [node name="Sprite" type="Sprite" parent="."]
 

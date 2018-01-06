@@ -31,13 +31,17 @@
 		,{"time": 95.0,    "ofs": 0.0,    "target": "vortex",        "method": "set_tail_fade",  "args": 0.01}
 		,{"time": 97.0,    "ofs": 0.0,    "target": "vortex",        "method": "set_amt_step_change",  "args": 0.01}
 		
-		,{"time": 100.0,    "ofs": 0.0,    "target": "vortex",        "method": "set_step_size",  "args": 0.15}
-		,{"time": 100.0,    "ofs": 0.0,    "target": "vortex",        "method": "set_amt_step_change",  "args": 0.1}
-		,{"time": 100.0,    "ofs": 0.0,    "target": "vortex",        "method": "set_repeat",  "args": 2.0}
+		,{"time": 100.0,    "ofs": 0.0,    "target": "vortex",        "method": "set_tail_fade",  "args": 2.0}
+		,{"time": 100.0,    "ofs": 0.0,    "target": "vortex",        "method": "set_repeat",  "args": 0.0}
+		,{"time": 100.5,    "ofs": 0.0,    "target": "vortex",        "method": "set_step_size",  "args": 0.15}
+		,{"time": 100.5,    "ofs": 0.0,    "target": "vortex",        "method": "set_amt_step_change",  "args": 0.1}		
 		,{"time": 102.0,    "ofs": 0.0,    "target": "vortex",        "method": "set_amt_step_change",  "args": 0.01}
 		,{"time": 102.0,    "ofs": 0.0,    "target": "vortex",        "method": "set_step_size",  "args": 0.2}
 		,{"time": 103.0,    "ofs": 0.0,    "target": "vortex",        "method": "set_step_size",  "args": 0.1}
+		,{"time": 103.0,    "ofs": 0.0,    "target": "vortex",        "method": "set_repeat",  "args": 2.0}
+		,{"time": 103.0,    "ofs": 0.0,    "target": "vortex",        "method": "set_tail_fade",  "args": 0.0}
 		
 		,{"time": 105.0,    "ofs": 0.0,    "target": "vortex",        "method": "set_repeat",  "args": 1.0}
+		,{"time": 105.0,    "ofs": 0.0,    "target": "vortex",        "method": "set_amt_step_change",  "args": 0.0}
     ]
 }
