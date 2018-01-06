@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://script/kaleido_end.gd" type="Script" id=1]
+[ext_resource path="res://shader/kaleido_hex.tres" type="Shader" id=2]
+[ext_resource path="res://kaleido_end_content.tscn" type="PackedScene" id=3]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+
+shader/shader = ExtResource( 2 )
+shader/shading_mode = 0
+shader_param/distCoeff = 1.0
+shader_param/angleCoeff = 1.0
+shader_param/timeCoeff = 0.4
+shader_param/scale = 1.0
+
+[node name="kaleido_end" type="Node2D"]
+
+script/script = ExtResource( 1 )
+
+[node name="ShaderFrame" type="ViewportSprite" parent="."]
+
+material/material = SubResource( 1 )
+transform/pos = Vector2( 640, 360 )
+transform/scale = Vector2( 2.5, 2.5 )
+viewport = NodePath("../Viewport")
+
+[node name="Viewport" type="Viewport" parent="."]
+
+rect = Rect2( 0, 0, 512, 512 )
+own_world = false
+world = null
+transparent_bg = false
+render_target/enabled = true
+render_target/v_flip = false
+render_target/clear_on_new_frame = true
+render_target/filter = false
+render_target/gen_mipmaps = false
+render_target/update_mode = 2
+audio_listener/enable_2d = false
+audio_listener/enable_3d = false
+physics/object_picking = false
+gui/disable_input = false
+
+[node name="kaleido_content" parent="Viewport" instance=ExtResource( 3 )]
+
+

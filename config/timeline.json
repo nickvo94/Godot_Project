@@ -5,6 +5,12 @@
 		,{"time": 0.0,    "ofs": 0.0,    "target": "kaleido",        "method": "set_opacity",  "args": 0.0}
 		,{"time": 0.0,    "ofs": 0.0,    "target": "self",           "method": "fade_to",      "args": ["kaleido", 1.0, 1.5]}
 		
+		,{"time": 10.0,     "ofs": 0.0,    "target": "title",        "method": "show",    "args": null}				
+		,{"time": 10.0,    "ofs": 0.0,    "target": "title",        "method": "set_opacity",  "args": 0.0}
+		,{"time": 10.0,    "ofs": 0.0,    "target": "self",           "method": "fade_to",      "args": ["title", 1.0, 1.0]}
+		,{"time": 15.0,    "ofs": 0.0,    "target": "self",           "method": "fade_to",      "args": ["title", 0.0, 5.0]}
+		,{"time":  21.0,     "ofs": 0.0,    "target": "title",        "method": "hide",    "args": null}				
+				
 		,{"time": 66.0,    "ofs": 0.0,    "target": "vortex",        "method": "set_amt_step_change",  "args": 0.0}
 		,{"time": 66.0,    "ofs": 0.0,    "target": "vortex",        "method": "show",         "args": null}
 		,{"time": 66.0,    "ofs": 0.0,    "target": "vortex",        "method": "set_opacity",  "args": 0.0}
@@ -79,6 +85,11 @@
 		,{"time": 130.0,    "ofs": 0.0,    "target": "self",          "method": "fade_to",      "args": ["grid", 0.0, 4.0]}
 		,{"time": 135.0,    "ofs": 0.0,    "target": "grid",          "method": "hide",         "args": null}
 		,{"time": 159.0,    "ofs": 0.0,    "target": "self",          "method": "fade_to",      "args": ["triangles", 0.0, 8.0]}
+		
+		,{"time": 158.0,     "ofs": 0.0,    "target": "credits",        "method": "show",    "args": null}				
+		,{"time": 158.0,    "ofs": 0.0,    "target": "credits",        "method": "set_opacity",  "args": 0.0}
+		,{"time": 158.0,    "ofs": 0.0,    "target": "self",           "method": "fade_to",      "args": ["credits", 1.0, 3.0]}
+		,{"time": 166.0,    "ofs": 0.0,    "target": "self",           "method": "fade_to",      "args": ["credits", 0.0, 2.0]}	
 		
     ]
 }

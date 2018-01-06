@@ -15,7 +15,7 @@ func _ready():
 	set_process(true)
 
 func set_time(new_time):
-	
+
 	#if(devi > 1):
 	time = (new_time)/devi
 	devi -= 0.008

@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://image/triangle.png" type="Texture" id=1]
+
+[node name="kaleido_content" type="Node2D"]
+
+[node name="ColorFrame" type="ColorFrame" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 648.0
+margin/bottom = 578.0
+color = Color( 0.109375, 0.0363159, 0.0363159, 0.670039 )
+
+[node name="cube" type="Sprite" parent="."]
+
+transform/pos = Vector2( 74.2047, 87.3482 )
+transform/rot = 39.1451
+transform/scale = Vector2( 0.12831, 0.12326 )
+texture = ExtResource( 1 )
+modulate = Color( 0.953125, 0.0856323, 0.0856323, 1 )
+
+[node name="cube1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 300.241, 148.994 )
+transform/rot = 39.1451
+transform/scale = Vector2( 0.12831, 0.12326 )
+texture = ExtResource( 1 )
+modulate = Color( 0.953125, 0.0856323, 0.0856323, 1 )
+
+[node name="cube2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 183.798, 285.986 )
+transform/rot = 39.1451
+transform/scale = Vector2( 0.12831, 0.12326 )
+texture = ExtResource( 1 )
+modulate = Color( 0.953125, 0.0856323, 0.0856323, 1 )
+
+

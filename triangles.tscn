@@ -14,11 +14,11 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -61.0
-margin/top = -251.0
-margin/right = 1339.0
-margin/bottom = 907.0
-color = Color( 0.191406, 0, 0, 0.705569 )
+margin/left = -73.0
+margin/top = -186.0
+margin/right = 1329.0
+margin/bottom = 914.0
+color = Color( 0.214844, 0.0201416, 0.0201416, 0.670039 )
 
 [node name="tri" type="Sprite" parent="."]
 
