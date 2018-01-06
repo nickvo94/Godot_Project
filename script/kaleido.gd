@@ -15,13 +15,13 @@ func _ready():
 	set_process(true)
 
 func set_time(new_time):
-
+	
 	#if(devi > 1):
-	time = new_time/devi
+	time = (new_time)/devi
 	devi -= 0.008
 	#if(time > 1): time = new_time/6.0
 	if(devi < 3):
-		time = new_time * multi
+		time = (new_time) * multi
 		multi += 0.001
 
 	#if(time > 2.2): time = new_time*2
