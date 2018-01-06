@@ -11,5 +11,6 @@ material/material = ExtResource( 1 )
 transform/pos = Vector2( 640, 360 )
 transform/scale = Vector2( 1.25, 1.25 )
 texture = ExtResource( 2 )
+modulate = Color( 0.671875, 0.406799, 0.406799, 1 )
 
 

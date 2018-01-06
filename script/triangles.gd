@@ -6,12 +6,15 @@ var tri
 var time = 0
 var morph_time = 0
 var speed = 1.0
-var spawn_freq = 0.15
+var spawn_freq = 0.1
 var prev_spawn = -9999
 var adelta = 0
 var amt_spawn_freq = 0.08
 var spawn_amt = 1
 var spin_amt = 0.0
+
+var wob_amt = 0.0
+var wob = 0
 
 func _ready():
 	sprites = get_node("sprites")
@@ -35,6 +38,9 @@ func set_audio(levels):
 	speed += levels[1]
 	speed = clamp(speed, 0.1, 0.3)
 
+	wob += levels[1]
+	wob = clamp(wob, 0.0, 1.0)
+	wob = lerp(wob, 0.0, 0.9)
 	#spin_amt = spin_amt + levels[1] * 0.01
 	#spin_amt = spin_amt - adelta * 0.01
 
@@ -44,6 +50,7 @@ func _process(delta):
 	#print(sprites.get_children().size())
 	for i in sprites.get_children():
 		var d = i.depth
+		i.set_wob(time, wob * wob_amt)
 		i.set_depth(d - 5.0 * adelta);
 		i.set_spin(0, morph_time * 0.1 * spin_amt)
 		if i.depth < 0.3:
@@ -58,5 +65,9 @@ func _process(delta):
 			newtri.show()
 			newtri.set_pos(Vector2(640, 360))
 			sprites.add_child(newtri)
+
+
+func set_amt_wob(value):
+	wob_amt = value
 
 

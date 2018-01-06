@@ -12,6 +12,8 @@ var adelta = 0
 var amt_spawn_freq = 0.08
 var spawn_amt = 1
 var spin_amt = 0.0
+var wob_amt = 0.0
+var wob = 0.0
 
 func _ready():
 	sprites = get_node("sprites")
@@ -34,6 +36,8 @@ func set_audio(levels):
 	speed = speed * 0.8
 	speed += levels[1]
 	speed = clamp(speed, 0.1, 0.3)
+
+	wob = levels[1] * 3.14
 
 	#spin_amt = spin_amt + levels[1] * 0.01
 	#spin_amt = spin_amt - adelta * 0.01

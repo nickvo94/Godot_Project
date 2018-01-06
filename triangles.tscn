@@ -18,7 +18,7 @@ margin/left = -61.0
 margin/top = -251.0
 margin/right = 1339.0
 margin/bottom = 907.0
-color = Color( 0.191406, 0, 0, 0.837569 )
+color = Color( 0.191406, 0, 0, 0.705569 )
 
 [node name="tri" type="Sprite" parent="."]
 

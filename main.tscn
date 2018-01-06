@@ -3,7 +3,6 @@
 [ext_resource path="res://script/main.gd" type="Script" id=1]
 [ext_resource path="res://kaleido.tscn" type="PackedScene" id=2]
 [ext_resource path="res://vortex.tscn" type="PackedScene" id=3]
-
 [ext_resource path="res://grid.tscn" type="PackedScene" id=4]
 [ext_resource path="res://triangles.tscn" type="PackedScene" id=5]
 [ext_resource path="res://sound/fixedSound.ogg" type="AudioStream" id=6]
@@ -56,6 +55,7 @@ tracks/1/keys = {
 
 script/script = ExtResource( 1 )
 time = 0.0
+end_time = 168.0
 audio_decay = 0.5
 audio_offset = 0
 debug_audio = false

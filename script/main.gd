@@ -1,6 +1,7 @@
 extends Node2D
 
 export var time = 0.0
+export var end_time = 165.0
 export var audio_decay = 0.5
 export var audio_offset = 5
 export var debug_audio = true
@@ -92,6 +93,8 @@ func _process(delta):
 	#print(music.get_pos())
 
 	time = time + delta
+
+	if time > end_time: get_tree().quit()
 
 	make_audio_levels()
 	if (debug_audio): get_node("debug/audio").set_audio(audio_levels)

@@ -35,6 +35,7 @@ angle = mod(angle, 1.0);
 dist  = mod(dist, 1.0);
 
 vec4 outColor = tex(TEXTURE, vec2(angle, dist)*scale);
+outColor.a *= COLOR.a;
 //outColor = color(angle, angle, angle, 1.0);
 
 COLOR = outColor;",
