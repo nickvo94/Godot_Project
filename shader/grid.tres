@@ -1,0 +1,57 @@
+[gd_resource type="CanvasItemMaterial" load_steps=2 format=1]
+
+[sub_resource type="CanvasItemShader" id=1]
+
+_code = {
+"fragment": "uniform float repeat = 4.0;
+float time;
+
+vec2 uv = UV * repeat;
+float idx = floor(uv.y) * repeat + floor(uv.x);
+
+color mul = color(0.0, 0.0, 0.0, 1.0);
+color mul2 = color(0.0, 0.0, 0.0, 1.0);
+float modIdx;
+float modTime;
+
+vec4 colorMod = vec4(52.0, 93.0, 14.0, 24.0);
+vec4 colorModP = vec4(51.0, 92.0, 13.0, 23.0);
+
+color outColor = tex(TEXTURE, uv).rgba;
+
+time = TIME * 2.0;
+
+modTime = floor(time) * (141.0);
+modIdx = idx + floor(modTime);
+mul.r = floor(mod(modIdx, colorMod.r) / colorModP.r);
+mul.g = floor(mod(modIdx, colorMod.g) / colorModP.g);
+mul.b = floor(mod(modIdx, colorMod.b) / colorModP.b);
+mul.a = 1.0 - floor(mod(modIdx, colorMod.a) / colorModP.a);
+
+modTime = (floor(time) - 1.0) * 141.0;
+modIdx = idx + floor(modTime);
+float diff = 1.0 - (time - floor(time));
+mul.r += floor(mod(modIdx, colorMod.r) / colorModP.r) * diff;
+mul.g += floor(mod(modIdx, colorMod.g) / colorModP.g) * diff;
+mul.b += floor(mod(modIdx, colorMod.b) / colorModP.b) * diff;
+mul.a += 1.0 - floor(mod(modIdx, colorMod.a) / colorModP.a) * diff;
+
+
+mul = clamp(mul, 0.0, 1.0);
+mul.a *= SRC_COLOR.a;
+outColor *= mul;
+COLOR = outColor;
+",
+"fragment_ofs": 0,
+"light": "",
+"light_ofs": 0,
+"vertex": "",
+"vertex_ofs": 0
+}
+
+[resource]
+
+shader/shader = SubResource( 1 )
+shader/shading_mode = 1
+shader_param/repeat = 32.0
+

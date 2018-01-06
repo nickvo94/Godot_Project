@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=1]
 
-[ext_resource path="res://script/triangles_2.gd" type="Script" id=1]
+[ext_resource path="res://script/triangles.gd" type="Script" id=1]
 [ext_resource path="res://image/triangle.png" type="Texture" id=2]
 [ext_resource path="res://script/triangle.gd" type="Script" id=3]
 
@@ -18,7 +18,7 @@ margin/left = -61.0
 margin/top = -251.0
 margin/right = 1339.0
 margin/bottom = 907.0
-color = Color( 0.191406, 0, 0, 0.893373 )
+color = Color( 0.191406, 0, 0, 0.837569 )
 
 [node name="tri" type="Sprite" parent="."]
 

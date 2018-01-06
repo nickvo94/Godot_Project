@@ -15,7 +15,7 @@ func set_depth(value):
 	depth = value
 	var s = Vector2(1 / depth, 1 / depth)
 	set_scale(s)
-	var o = clamp((1 / (depth * 8.0)) * 3.0, 0, 1)
+	var o = clamp(pow((1 / depth) * 2.0, 4.0), 0.0, 1.0)
 	set_opacity(o)
 
 

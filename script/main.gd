@@ -20,6 +20,7 @@ var spectrum_size = 30
 var audio_spectrum
 var music_length = 0
 var audio_levels = [0.0]
+var time_offset = 0
 
 var tweens
 
@@ -60,6 +61,8 @@ func load_actions():
 	text = file.get_as_text()
 	content.parse_json(text)
 	if (typeof(content) == TYPE_DICTIONARY):
+		if (content.has("global_time_ofs")):
+			time_offset = content.global_time_ofs
 		if (content.has("actions")):
 			actions = content.actions
 			print("Ok.")
@@ -97,7 +100,7 @@ func _process(delta):
 	#	print(audio_levels)
 
 	for part in parts:
-		if part.has_method("set_time"): part.set_time(time)
+		if part.has_method("set_time"): part.set_time(time + time_offset)
 		if part.has_method("set_audio"): part.set_audio(audio_levels)
 
 	run_timeline_actions()
@@ -114,7 +117,7 @@ func run_timeline_actions():
 			break
 
 		action = actions[action_idx]
-		if (action.time < time):
+		if ((action.time + action.ofs) < time):
 			prints(time, action.target, action.method)
 			if action.target == "self":
 				self.callv(action.method, action.args)

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://shader/grid.tres" type="CanvasItemMaterial" id=1]
+[ext_resource path="res://image/triangle.png" type="Texture" id=2]
+
+[node name="grid" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+
+material/material = ExtResource( 1 )
+transform/pos = Vector2( 640, 360 )
+transform/scale = Vector2( 1.25, 1.25 )
+texture = ExtResource( 2 )
+
+
