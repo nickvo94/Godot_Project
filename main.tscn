@@ -3,6 +3,7 @@
 [ext_resource path="res://script/main.gd" type="Script" id=1]
 [ext_resource path="res://kaleido.tscn" type="PackedScene" id=2]
 [ext_resource path="res://vortex.tscn" type="PackedScene" id=3]
+
 [ext_resource path="res://grid.tscn" type="PackedScene" id=4]
 [ext_resource path="res://triangles.tscn" type="PackedScene" id=5]
 [ext_resource path="res://sound/fixedSound.ogg" type="AudioStream" id=6]
@@ -54,7 +55,11 @@ tracks/1/keys = {
 [node name="main" type="Node2D"]
 
 script/script = ExtResource( 1 )
+<<<<<<< HEAD
 time = 40.0
+=======
+time = 0.0
+>>>>>>> 02290534b748610093529acafa6c42e6e76aaeb4
 audio_decay = 0.5
 audio_offset = 0
 debug_audio = false

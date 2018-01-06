@@ -32,7 +32,7 @@ func set_audio(levels):
 	material_node.set_shader_param("radial_repeat", amt_repeat)
 	material_node.set_shader_param("fade_amt", tail_fade)
 	material_node.set_shader_param("step_size", step_size + levels[1] * amt_step_change)
-	material_node.set_shader_param("sharpness", clamp(audio * 0.2 + 0.8, 0.5, 1.0))
+	material_node.set_shader_param("sharpness", clamp(audio * 0.5 + 0.8, 0.5, 1.0))
 	morph_time += levels[1] * amt_morph_time
 	tail_fade += levels[4] * amt_tail_fade
 	tail_fade = lerp(tail_fade, 1.0, 0.1)

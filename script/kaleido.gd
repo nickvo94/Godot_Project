@@ -43,10 +43,6 @@ func _process(delta):
 		else: multi -= 0.005
 		material_node.set_shader_param("distCoeff", multi+1)
 		material_node.set_shader_param("angleCoeff", multi-1.48)
-		print(time)
-
-
-
 
 	pass
 

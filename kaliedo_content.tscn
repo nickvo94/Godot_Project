@@ -10,7 +10,7 @@
 
 [node name="icon5" type="Sprite" parent="."]
 
-transform/pos = Vector2( -139.64, 1053.15 )
+transform/pos = Vector2( -11.3225, 1025.25 )
 transform/rot = -0.108711
 transform/scale = Vector2( 5.78051, 5.93546 )
 texture = ExtResource( 1 )
