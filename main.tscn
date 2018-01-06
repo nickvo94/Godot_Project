@@ -1,12 +1,13 @@
-[gd_scene load_steps=11 format=1]
+[gd_scene load_steps=12 format=1]
 
 [ext_resource path="res://script/main.gd" type="Script" id=1]
 [ext_resource path="res://kaleido.tscn" type="PackedScene" id=2]
 [ext_resource path="res://vortex.tscn" type="PackedScene" id=3]
 [ext_resource path="res://grid.tscn" type="PackedScene" id=4]
 [ext_resource path="res://triangles.tscn" type="PackedScene" id=5]
-[ext_resource path="res://sound/fixedSound.ogg" type="AudioStream" id=6]
-[ext_resource path="res://script/debug_audio.gd" type="Script" id=7]
+[ext_resource path="res://title.tscn" type="PackedScene" id=6]
+[ext_resource path="res://sound/fixedSound.ogg" type="AudioStream" id=7]
+[ext_resource path="res://script/debug_audio.gd" type="Script" id=8]
 
 [sub_resource type="CanvasItemShader" id=1]
 
@@ -95,11 +96,13 @@ playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
 
+[node name="Node2D" parent="parts" instance=ExtResource( 6 )]
+
 [node name="sound" type="Node" parent="."]
 
 [node name="StreamPlayer" type="StreamPlayer" parent="sound"]
 
-stream/stream = ExtResource( 6 )
+stream/stream = ExtResource( 7 )
 stream/play = false
 stream/loop = false
 stream/volume_db = 0.0
@@ -139,7 +142,7 @@ __meta__ = {
 [node name="audio" type="Node2D" parent="debug"]
 
 z/z = 200
-script/script = ExtResource( 7 )
+script/script = ExtResource( 8 )
 __meta__ = {
 "_edit_lock_": true
 }
