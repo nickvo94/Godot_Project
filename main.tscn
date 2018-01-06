@@ -55,11 +55,7 @@ tracks/1/keys = {
 [node name="main" type="Node2D"]
 
 script/script = ExtResource( 1 )
-<<<<<<< HEAD
-time = 40.0
-=======
 time = 0.0
->>>>>>> 02290534b748610093529acafa6c42e6e76aaeb4
 audio_decay = 0.5
 audio_offset = 0
 debug_audio = false
